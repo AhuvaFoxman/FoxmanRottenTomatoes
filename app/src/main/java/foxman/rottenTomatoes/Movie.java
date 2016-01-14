@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by AFoxman on 1/3/2016.
  */
-public class Movie implements Serializable{
+public class Movie implements Serializable {
 
     private String title;
     private int year;
@@ -50,16 +50,13 @@ public class Movie implements Serializable{
         return synopsis;
     }
 
-    public Poster getPosters(){
+    public Poster getPosters() {
         return this.posters;
     }
 
     public AbridgedCast[] getAbridged_cast() {
         return abridged_cast;
     }
-
-
-
 
 
 }

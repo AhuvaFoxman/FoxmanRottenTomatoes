@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import java.io.Serializable;
 
 
-public class DetailActivity extends AppCompatActivity implements Serializable{
+public class DetailActivity extends AppCompatActivity implements Serializable {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,15 +15,14 @@ public class DetailActivity extends AppCompatActivity implements Serializable{
         setContentView(R.layout.activity_detail);
 
 
-
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
 
         Movie[] movies = (Movie[]) getIntent().getSerializableExtra("MOVIES");
-        int position = getIntent().getIntExtra("POSITION",0);
+        int position = getIntent().getIntExtra("POSITION", 0);
 
         MoviesDetailPagerAdapter adapter = new MoviesDetailPagerAdapter(movies);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(position);
 
-}
+    }
 }

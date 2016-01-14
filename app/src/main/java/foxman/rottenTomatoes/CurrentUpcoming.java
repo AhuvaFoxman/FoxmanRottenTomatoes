@@ -9,16 +9,16 @@ public class CurrentUpcoming {
 
     private UpcomingMovies upcomingMovies;
 
-    public CurrentUpcoming (CurrentMovies currentMovies, UpcomingMovies upcomingMovies){
+    public CurrentUpcoming(CurrentMovies currentMovies, UpcomingMovies upcomingMovies) {
         this.currentMovies = currentMovies;
         this.upcomingMovies = upcomingMovies;
     }
 
-    public CurrentMovies getCurrentMovies(){
-        return  this.currentMovies;
+    public CurrentMovies getCurrentMovies() {
+        return this.currentMovies;
     }
 
-    public UpcomingMovies getUpcomingMovies(){
+    public UpcomingMovies getUpcomingMovies() {
         return this.upcomingMovies;
     }
 }

@@ -30,12 +30,11 @@ public class MoviesViewHolder extends RecyclerView.ViewHolder {
         image = (ImageView) itemView.findViewById(R.id.thumbnail);
         title = (TextView) itemView.findViewById(R.id.title);
         criticScore = (TextView) itemView.findViewById(R.id.critics);
-        audienceScore =(TextView) itemView.findViewById(R.id.audience);
+        audienceScore = (TextView) itemView.findViewById(R.id.audience);
         cast = (TextView) itemView.findViewById(R.id.cast);
         rateRuntime = (TextView) itemView.findViewById(R.id.ratingRuntime);
         imageFlixter = (ImageView) itemView.findViewById(R.id.flixterImage);
         imageRottenTomatoes = (ImageView) itemView.findViewById(R.id.rottenTomatoes);
-
 
 
     }
@@ -49,7 +48,7 @@ public class MoviesViewHolder extends RecyclerView.ViewHolder {
 
         title.setText(movie.getTitle());
         criticScore.setText(" " + String.valueOf(movie.getRatings().getCritics_score() + "% "));
-        audienceScore.setText(" " + String.valueOf(movie.getRatings().getAudience_score()+"% "));
+        audienceScore.setText(" " + String.valueOf(movie.getRatings().getAudience_score() + "% "));
 
 
         for (AbridgedCast c : movie.getAbridged_cast()) {
@@ -61,7 +60,6 @@ public class MoviesViewHolder extends RecyclerView.ViewHolder {
 
         imageRottenTomatoes.setImageResource(R.drawable.rottentomatoes);
         imageFlixter.setImageResource(R.drawable.flixter);
-
 
 
     }

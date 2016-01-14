@@ -14,7 +14,7 @@ import java.io.Serializable;
 /**
  * Created by AFoxman on 1/4/2016.
  */
-public class MoviesDetailPagerAdapter extends android.support.v4.view.PagerAdapter implements Serializable{
+public class MoviesDetailPagerAdapter extends android.support.v4.view.PagerAdapter implements Serializable {
 
     private Movie[] movies;
 
@@ -40,17 +40,15 @@ public class MoviesDetailPagerAdapter extends android.support.v4.view.PagerAdapt
         ImageView smallImage = (ImageView) view.findViewById(R.id.imageTwo);
         ImageView rottenTomatoesImage = (ImageView) view.findViewById(R.id.rottenTomatoes);
         ImageView flixter = (ImageView) view.findViewById(R.id.criticImage);
-        TextView  cScore = (TextView) view.findViewById(R.id.cScore);
-        TextView  aScore = (TextView) view.findViewById(R.id.aScore);
+        TextView cScore = (TextView) view.findViewById(R.id.cScore);
+        TextView aScore = (TextView) view.findViewById(R.id.aScore);
 
 
-       Movie movie = movies[position];
+        Movie movie = movies[position];
 
 
         Picasso.with(container.getContext())
                 .load(movie.getPosters().getProfile()).into(image);
-
-
 
 
         Picasso.with(container.getContext())
@@ -73,7 +71,6 @@ public class MoviesDetailPagerAdapter extends android.support.v4.view.PagerAdapt
         aScore.setText(" " + movie.getRatings().getAudience_score() + "%");
 
 
-
         summary.setText(movie.getSynopsis());
         rated.setText("Rated " + movie.getMpaa_rating());
         time.setText("Running Time " + movie.getRuntime() + " minutes");
@@ -86,7 +83,7 @@ public class MoviesDetailPagerAdapter extends android.support.v4.view.PagerAdapt
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView((View)object);
+        container.removeView((View) object);
     }
 
     @Override

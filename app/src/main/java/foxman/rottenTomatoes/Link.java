@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by AFoxman on 1/3/2016.
  */
-public class Link implements Serializable{
+public class Link implements Serializable {
 
     private String self;
     private String alternate;

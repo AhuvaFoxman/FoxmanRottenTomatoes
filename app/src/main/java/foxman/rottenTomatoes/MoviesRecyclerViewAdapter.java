@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import java.io.Serializable;
 
 
-public class MoviesRecyclerViewAdapter extends RecyclerView.Adapter<MoviesViewHolder> implements Serializable{
+public class MoviesRecyclerViewAdapter extends RecyclerView.Adapter<MoviesViewHolder> implements Serializable {
 
 
     private Movie[] movies;
@@ -19,13 +19,14 @@ public class MoviesRecyclerViewAdapter extends RecyclerView.Adapter<MoviesViewHo
 
         this.movies = movies;
     }
+
     @Override
     public MoviesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.
                 from(parent.getContext()).
                 inflate(R.layout.rotten_tomatoes_list_item, parent, false);
 
-        return new MoviesViewHolder(itemView,parent.getContext());
+        return new MoviesViewHolder(itemView, parent.getContext());
     }
 
     @Override
@@ -38,23 +39,16 @@ public class MoviesRecyclerViewAdapter extends RecyclerView.Adapter<MoviesViewHo
             public void onClick(View v) {
 
                 Context context = holder.itemView.getContext();
-                Intent intent = new Intent(context,DetailActivity.class);
+                Intent intent = new Intent(context, DetailActivity.class);
                 intent.putExtra("MOVIES", movies);
                 intent.putExtra("POSITION", position);
 
 
-                            context.startActivity(intent);
+                context.startActivity(intent);
 
-                        }
-                    });
-                }
-
-
-
-
-
-
-
+            }
+        });
+    }
 
 
     @Override

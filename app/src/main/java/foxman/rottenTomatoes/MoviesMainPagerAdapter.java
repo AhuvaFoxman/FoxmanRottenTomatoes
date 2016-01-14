@@ -11,13 +11,12 @@ import android.view.ViewGroup;
 /**
  * Created by AFoxman on 1/12/2016.
  */
-public class MoviesMainPagerAdapter extends PagerAdapter{
+public class MoviesMainPagerAdapter extends PagerAdapter {
 
     private UpcomingMovies upcomingMovies;
     private CurrentMovies currentMovies;
     private transient Context context;
     private Movie[] movies;
-
 
 
     public MoviesMainPagerAdapter(CurrentUpcoming currentUpcoming, Context context) {
@@ -34,12 +33,11 @@ public class MoviesMainPagerAdapter extends PagerAdapter{
 
 
         RecyclerView recyclerView = (RecyclerView) itemView.findViewById(R.id.recyclerView);
-        if(position == 0) {
+        if (position == 0) {
             this.movies = currentMovies.getMovies();
             MoviesRecyclerViewAdapter recyclerViewAdapter = new MoviesRecyclerViewAdapter(movies);
             recyclerView.setAdapter(recyclerViewAdapter);
-        }
-        else if(position == 1) {
+        } else if (position == 1) {
             this.movies = upcomingMovies.getMovies();
             MoviesRecyclerViewAdapter recyclerViewAdapter = new MoviesRecyclerViewAdapter(movies);
             recyclerView.setAdapter(recyclerViewAdapter);
@@ -56,7 +54,7 @@ public class MoviesMainPagerAdapter extends PagerAdapter{
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView((View)object);
+        container.removeView((View) object);
     }
 
     @Override
@@ -68,7 +66,6 @@ public class MoviesMainPagerAdapter extends PagerAdapter{
     public boolean isViewFromObject(View view, Object object) {
         return view == object;
     }
-
 
 
 }

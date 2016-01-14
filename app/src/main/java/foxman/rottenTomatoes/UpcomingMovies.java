@@ -6,7 +6,7 @@ package foxman.rottenTomatoes;
 public class UpcomingMovies {
     private Movie[] movies;
 
-    public Movie[] getMovies(){
+    public Movie[] getMovies() {
         return this.movies;
     }
 }
